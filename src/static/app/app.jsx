@@ -6,10 +6,10 @@ export default class App extends React.Component {
   constructor() {
     super();
 
-    this.addTask = this.addTask.bind(this);
-    this.deleteTask = this.deleteTask.bind(this);
-    this.update = this.update.bind(this);
-    this.service = new Service();
+    this.addTask = this.addTask.bind(this)
+    this.deleteTask = this.deleteTask.bind(this)
+    this.update = this.update.bind(this)
+    this.service = new Service()
 
     this.state = {
       taskList: []
@@ -17,7 +17,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    this.update();
+    this.update()
   }
 
   render() {
@@ -30,6 +30,10 @@ export default class App extends React.Component {
   }
 
   addTask(text) {
+    if (text === '') {
+      alert('Plese enter some text.')
+    }
+
     const index = this.state.taskList.indexOf(text);
     
     if (index === -1) {

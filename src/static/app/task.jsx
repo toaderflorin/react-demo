@@ -10,4 +10,4 @@ const Task = ({task, deleteTask}) => {
   );
 }
 
-export default Task;
+export default Task

@@ -18,7 +18,7 @@ class AddTask extends React.Component {
         <input type="text" value={this.state.taskText} onChange={this.handleChange} />
         <button onClick={this.props.addTask.bind(this, this.state.taskText)}>Add</button>
       </div>
-    );
+    )
   }
 
   handleChange(event) {
