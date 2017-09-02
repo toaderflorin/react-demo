@@ -21,7 +21,7 @@ app.get('/tasks', (req, res) => {
   res.send(JSON.stringify(tasks));
 });
 
-app.post('/tasks', (req, res) => {  
+app.post('/tasks', (req, res) => {
   const taskText = req.body.task;
   tasks.push(taskText);
   res.send('');

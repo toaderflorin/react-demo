@@ -2,6 +2,8 @@ const axios = require('axios');
 
 class AddTask extends React.Component {
   constructor() {
+    super();
+    
     this.state = {
       taskText: ''
     };
