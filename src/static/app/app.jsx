@@ -1,20 +1,23 @@
-const service = require('./service');
-const AddTask = require('./addTask');
-const TaskList = require('./taskList');
+import Service from './service';
+import AddTask from './addTask';
+import TaskList from './taskList';
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor() {
     super();
+
     this.addTask = this.addTask.bind(this);
     this.deleteTask = this.deleteTask.bind(this);
     this.update = this.update.bind(this);
+    this.service = new Service();
+
     this.state = {
       taskList: []
     };
   }
 
   componentDidMount() {
-    update();
+    this.update();
   }
 
   render() {
@@ -30,25 +33,23 @@ class App extends React.Component {
     const index = this.state.taskList.indexOf(text);
     
     if (index === -1) {
-      service.addTask(text).then(this.update);
+      this.service.addTask(text).then(this.update)
     } else {
-      alert('Task already exists.');
+      alert('Task already exists.')
     }
   }
 
   deleteTask(task) {
     if (confirm('Are you sure')) {
-      service.deleteTask(task).then(this.update);
+      this.service.deleteTask(task).then(this.update)
     }
   }
 
   update() {
-    service.getTasks().then((results) => {
+    this.service.getTasks().then((results) => {
       this.setState({
         taskList: results
       });
     });
   }
 }
-
-module.exports = App;

@@ -1,14 +1,14 @@
-const axios = require('axios');
+import axios from 'axios'
 
 class AddTask extends React.Component {
   constructor() {
-    super();
+    super()
     
     this.state = {
       taskText: ''
     };
-
-    this.handleChange = this.handleChange.bind(this);
+    
+    this.handleChange = this.handleChange.bind(this)
   }
 
   render() {
@@ -28,4 +28,4 @@ class AddTask extends React.Component {
   }
 }
 
-module.exports = AddTask;
+module.exports = AddTask

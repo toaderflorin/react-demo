@@ -1,10 +1,10 @@
-const axios = require('axios');
+import axios from 'axios'
 
-class TaskService {
+export default class TaskService {
   getTasks() {
     return new Promise((resolve, reject) => {
       axios.get('/tasks').then((response) => {
-        resolve(response.data);        
+        resolve(response.data)
       });
     });    
   }
@@ -12,19 +12,17 @@ class TaskService {
   addTask(text) {
     return new Promise((resolve, reject) => {
       axios.post('/tasks', {task: text}).then((response) => {
-        resolve();
+        resolve()
       });
     });
   }
 
   deleteTask(task) {
-    console.log('Removing task.');
+    console.log('Removing task.')
     return new Promise((resolve, reject) => {
       axios.delete('/tasks/' + task).then(() => {
-        resolve();
+        resolve()
       });
     });
   }
 }
-
-module.exports = new TaskService();

@@ -1,8 +1,8 @@
-const Task = require('./task');
+import Task from'./task'
 
 const TaskList = ({ taskList, deleteTask }) => {
   const els = taskList.map((task) => {
-    return <Task task={task} deleteTask={deleteTask} />;
+    return <Task task={task} deleteTask={deleteTask} />
   });
 
   return (
@@ -12,4 +12,4 @@ const TaskList = ({ taskList, deleteTask }) => {
   );
 };
 
-module.exports = TaskList;
+export default TaskList

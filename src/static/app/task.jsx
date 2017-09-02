@@ -1,6 +1,6 @@
-const service = require('./service');
+import service from'./service';
 
-const Task = ({ task, deleteTask }) => {
+const Task = ({task, deleteTask}) => {
   return (
     <div className="task">
       <button onClick={deleteTask.bind(this, task)}>Delete</button>
@@ -10,4 +10,4 @@ const Task = ({ task, deleteTask }) => {
   );
 }
 
-module.exports = Task;
+export default Task;
