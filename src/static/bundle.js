@@ -23105,7 +23105,6 @@ module.exports = ReactDOMInvalidARIAHook;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__service__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__addTask__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__addTask___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__addTask__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__taskList__ = __webpack_require__(212);
 
 
@@ -23133,7 +23132,7 @@ class App extends React.Component {
     return React.createElement(
       'div',
       { className: 'content' },
-      React.createElement(__WEBPACK_IMPORTED_MODULE_1__addTask___default.a, { addTask: this.addTask }),
+      React.createElement(__WEBPACK_IMPORTED_MODULE_1__addTask__["a" /* default */], { addTask: this.addTask }),
       React.createElement(__WEBPACK_IMPORTED_MODULE_2__taskList__["a" /* default */], { taskList: this.state.taskList, deleteTask: this.deleteTask })
     );
   }
@@ -24035,9 +24034,12 @@ module.exports = function spread(callback) {
 
 /***/ }),
 /* 211 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-const axios = __webpack_require__(84);
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+
 
 class AddTask extends React.Component {
   constructor() {
@@ -24075,7 +24077,7 @@ class AddTask extends React.Component {
   }
 }
 
-module.exports = AddTask;
+/* harmony default export */ __webpack_exports__["a"] = (AddTask);
 
 /***/ }),
 /* 212 */
